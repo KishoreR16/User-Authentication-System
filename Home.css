@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(Q1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* align items center vertically and horizontally  */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:center !important;
+  height: 100vh;
+}
+.form{
+  width: 550px;
+  height: 450px;
+  background-color: rgba(41, 39, 39, 0.3);
+  box-shadow: 0 5px 30px black;
+}
+.btn button {
+  padding: 3px;
+  margin: 30px 0px 40px 30px;
+  border-style: none;
+  background-color: transparent;
+  color: beige;
+  font-size: 18px;
+  font-weight: 550;
+}
+.formGroup{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color:red;
+  font-weight:bold;
+}
+.formGroup input{
+  
+  border: none;
+  width: 80%;
+   padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+}
+
+input[type=text]:focus, [type=password]:focus, [type=email]:focus{
+  
+  border-bottom: 2px solid rgb(91, 243, 131);
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+::placeholder {
+  color: white;
+}
+
+.text{
+  color: rgb(199, 197, 197);
+  font-size: 13px;
+}
+.login
+    {
+        display: none;
+      }
+.login .checkBox{
+  margin-top: 30px !important;
+}
+.btn2{
+  padding: 10px;
+  width: 150px;
+  border-radius: 20px;
+  background-color: rgb(10, 136, 43,0.8);
+  border-style: none;
+  color: white;
+  font-weight: 600;
+}
+
+.btn2:hover{
+  background-color: rgba(10, 136, 43, 0.5);
+  border-bottom: 0px solid green;
+}
+.forgot{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color:white;
+  font-weight:bold;
+}
+.forgot input{
+  
+  border: none;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+}
+
+
+/* hide signup form */

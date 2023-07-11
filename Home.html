@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Home.css" rel="stylesheet" type="text/css">
+  <script src="Home.js" type="text/javascript"></script>
+  <title>Transparent form</title>
+</head>
+ 
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button style="border-bottom: 2px solid rgb(91, 243, 131);" id="signUpBtn" onclick="signupstyle() ">SIGN UP</button>
+        <button id="loginBtn" onclick="loginstyle()">LOG IN</button>
+        </div>
+        <form class="signUp" action="form" method="post">
+          <div class="formGroup">
+            <table>
+              <tr>
+                <td><input id='username1' name='username' oninput="validation('username',username.value)" type='text' placeholder="User Name" autocomplete="off"></td>
+                <td>
+                  <div id='username'></div>
+                </td>
+              </tr>
+              <tr>
+                <td><input id='email1' name='email' oninput="validation('email', email.value)" type='text' placeholder="Email ID"  autocomplete="off"></td>
+                <td>
+                  <div id='email'></div>
+                </td>
+              </tr>
+              <tr>
+                <td><input id='password2' name='password1' oninput="passwordValidate('password1', password1.value)" type='password' placeholder="Password"  autocomplete="off"></td>
+                <td>
+                  <div id='password1'></div>
+                </td>
+              </tr>
+              <tr>
+                <td><input id='password4' name='confirm' oninput="confirmValidate('password3',password1.value,confirm.value)" type='password' placeholder="Confirm Password"></td>
+                <td>
+                  <div id='password3'></div>
+                </td>
+              </tr>
+              <tr>
+                <div id='account' style="text-align:center;"></div>
+              </tr>
+            </table>     
+            <input style="background-color:rgb(10, 136, 43,1);width: 40%;"  onMouseOver="this.style.backgroundColor='rgb(10, 136, 43,0.7)'" onmouseout="this.style.backgroundColor='rgb(10, 136, 43,1)'" onclick="checkForm()" type='button' class="btn2" value='Register'>
+            <input type="reset" value="Reset" style="background-color:rgb(10, 136, 43,1);border-radius: 20px;width: 40%;margin-top: -10%;margin-left: 50%; "  onMouseOver="this.style.backgroundColor='rgb(10, 136, 43,0.7)'" onmouseout="this.style.backgroundColor='rgb(10, 136, 43,1)'"> 
+
+          </div>
+        </form>
+        
+      <!------ Login Form -------- -->
+      <form class="login" action="login" method="get">
+        
+        <div class="formGroup">
+          <input type="email" placeholder="Email ID" id="emaillogin" name="emailloginname" required autocomplete="off">
+          <input type="password" id="passwordlogin" placeholder="Password" name="passwordloginname" required autocomplete="off">
+         
+        </div>
+        
+        <input type="submit" value="Signin" class="btn2" >
+        <input onclick="enableForgotPassword()" type='button' class="btn2" value='Forgot Password'>
+      </form>
+
+      <form action="" class="forgotClass" method="POST" style="display:none;"> 
+        <div class="formGroup">
+         <br>
+         <h2 id="hide1">Forgot Password</h2><br>
+         <h3 id="hide2">Enter your Email to receive the OTP</h3><br>
+         <br>
+         <input id='emailforgot' name='emailforgotname'  type='email' placeholder="Email" autocomplete="off" required>
+         <input type="button" id="otpbutton" value="Send OTP" style="background-color:rgb(10, 136, 43,1);border-radius: 20px;"  onMouseOver="this.style.backgroundColor='rgb(10, 136, 43,0.7)'" onmouseout="this.style.backgroundColor='rgb(10, 136, 43,1)'" onclick="sendotp(emailforgotname.value)">
+          <div id="hidingotp" style="display:none;">
+            <table>
+              <tr>
+                <td><input type="text" id='hideotp' name='hideotpname' placeholder="OTP" autocomplete="off"></td>
+                <td>
+                  <div id='hideotpmsg'></div>
+                </td>
+              </tr>
+              <tr>
+                <td><input id='otppassword2' name='otppassword1' oninput="passwordValidate('otppassword1', otppassword1.value)" type='password' placeholder="Password"  autocomplete="off"></td>
+                <td>
+                  <div id='otppassword1'></div>
+                </td>
+              </tr>
+              <tr>
+                <td><input id='otppassword4' name='confirm' oninput="confirmValidate('otppassword3',otppassword1.value,confirm.value)" type='password' placeholder="Confirm Password"></td>
+                <td>
+                  <div id='otppassword3'></div>
+                </td>
+              </tr>
+            </table>
+            <input type="button" id="otpbutton1" value="Change Password" style="background-color:rgb(10, 136, 43,1);border-radius: 20px;"  onMouseOver="this.style.backgroundColor='rgb(10, 136, 43,0.7)'" onmouseout="this.style.backgroundColor='rgb(10, 136, 43,1)'" onclick="checkForm2()">
+          </div>
+
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>
+ 
+</html>
